@@ -33,6 +33,7 @@ const signin = async (
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        'User-Agent': '*',
       },
       body: JSON.stringify(params),
     },

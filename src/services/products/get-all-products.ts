@@ -68,6 +68,7 @@ const getAllProducts = async (
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
+      'User-Agent': '*',
     },
   })
 }

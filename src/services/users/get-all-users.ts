@@ -7,12 +7,15 @@ import { fetcher } from 'utils'
  * @returns ユーザー一覧
  */
 const getAllUsers = async (context: ApiContext): Promise<User[]> => {
-  return await fetcher(`${context.apiRootUrl.replace(/\/$/g, '')}/users`, {
+  const res = await fetcher(`${context.apiRootUrl.replace(/\/$/g, '')}/users`, {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
+      'User-Agent': '*',
     },
   })
+
+  return res
 }
 
 export default getAllUsers
